@@ -12,51 +12,74 @@
   h1 { font-size: 1.6rem; margin-bottom: 4px; }
   h2 { font-size: 1.1rem; margin-top: 28px; color: var(--accent); }
   .muted { color: var(--muted); font-size: .9rem; }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+  th, td { text-align: left; padding: 8px; border-bottom: 1px solid color-mix(in srgb, var(--fg) 15%, transparent); vertical-align: top; }
   hr { border: 0; border-top: 1px solid color-mix(in srgb, var(--fg) 15%, transparent); margin: 40px 0; }
 </style>
 </head>
 <body>
 <main>
   <h1>Gizlilik Politikası</h1>
-  <p class="muted">Altıgen Kelime Oyunu · Geliştirici: kha · Yürürlük tarihi: 14 Ekim 2026</p>
+  <p class="muted">Altıgen Kelime Oyunu · Geliştirici: kha · Yürürlük tarihi: 15 Ekim 2026</p>
 
   <p>Bu politika, Android için "Altıgen Kelime Oyunu" uygulamasının (paket adı <code>com.kha.altigenkelime</code>) verilerinizi nasıl ele aldığını açıklar.</p>
 
-  <h2>Toplanan veriler</h2>
-  <p>Uygulama <strong>hiçbir kişisel veri toplamaz, göndermez veya paylaşmaz.</strong> Uygulamanın internet erişim izni yoktur; reklam, analiz veya izleme aracı içermez. Hesap oluşturma veya giriş gerektirmez.</p>
+  <h2>Özet</h2>
+  <ul>
+    <li><strong>Tek oyunculu modlar</strong> (Oyun, Günün Sorusu, İstatistik) hiçbir kişisel veri toplamaz; bilgiler yalnızca cihazınızda kalır.</li>
+    <li><strong>Royale</strong> (çevrim içi düello) isteğe bağlıdır. Kullanmak için Google ile giriş yaparsınız; yalnızca oyunun çalışması için gereken asgari bilgiler sunucumuzda tutulur.</li>
+    <li>Reklam, analiz veya izleme aracı kullanılmaz. Verileriniz satılmaz ve üçüncü taraflarla paylaşılmaz.</li>
+  </ul>
 
   <h2>Cihazınızda saklanan bilgiler</h2>
-  <p>Oyunun çalışması için aşağıdaki bilgiler yalnızca cihazınızda saklanır:</p>
   <ul>
     <li>Ayarlarınız (ses, titreşim, hatırlatma tercihi)</li>
-    <li>Oyun istatistikleriniz (oynanan oyun sayısı, skorlar, doğru/yanlış sayıları)</li>
-    <li>Günün Sorusu sonucunuz ve günlük seriniz</li>
+    <li>Tek oyunculu istatistikleriniz ve Günün Sorusu seriniz</li>
+    <li>Royale'e giriş yaptıysanız, sunucunun verdiği oturum anahtarı (Google şifreniz veya hesabınızın kendisi saklanmaz)</li>
   </ul>
-  <p>Bu bilgiler geliştiriciye ulaşmaz. Cihazınızda Android yedeklemesi açıksa, Android bu bilgileri Google hesabınızdaki yedeğe dahil edebilir; bu işlem Google'ın kendi gizlilik koşullarına tabidir. Uygulamayı kaldırdığınızda veya uygulama verilerini temizlediğinizde tüm bilgiler silinir.</p>
+  <p>Cihazınızda Android yedeklemesi açıksa Android bu bilgileri Google hesabınızdaki yedeğe dahil edebilir; bu işlem Google'ın kendi koşullarına tabidir.</p>
+
+  <h2>Royale için sunucumuzda tutulan bilgiler</h2>
+  <table>
+    <tr><th>Bilgi</th><th>Neden</th></tr>
+    <tr><td>Google hesabınızın benzersiz kimlik numarası</td><td>Sizi her girişte tanımak (hesap)</td></tr>
+    <tr><td>Görünen ad: adınız ve soyadınızın baş harfi (ör. "Ayşe K.")</td><td>Rakiplerinize ve sıralama tablosunda gösterilmek</td></tr>
+    <tr><td>ELO puanı, galibiyet/mağlubiyet sayıları, maç skorları ve tarihleri</td><td>Eşleştirme, puanlama ve sıralama tablosu</td></tr>
+  </table>
+  <p><strong>E-posta adresiniz, profil fotoğrafınız ve konumunuz saklanmaz.</strong> Maç sırasında yazdığınız tahminler yalnızca o anda doğru/yanlış kontrolü için kullanılır ve kaydedilmez. Uygulama ile sunucu arasındaki iletişim şifrelidir (TLS).</p>
+  <p>Görünen adınız ve ELO puanınız, Royale oynayan diğer kullanıcılara sıralama tablosunda ve maç ekranında gösterilir.</p>
+
+  <h2 id="hesap-silme">Hesabınızı ve verilerinizi silme</h2>
+  <ul>
+    <li><strong>Uygulama içinden:</strong> Royale → lobi ekranının altındaki <em>Hesabımı sil</em>. Hesabınız, görünen adınız, ELO puanınız ve istatistikleriniz kalıcı olarak hemen silinir; geçmiş maç kayıtlarında kimliğiniz anonimleştirilir.</li>
+    <li><strong>E-postayla:</strong> Uygulamaya erişiminiz yoksa <a href="mailto:kha.development.soft@gmail.com?subject=Hesap%20silme%20talebi">kha.development.soft@gmail.com</a> adresine "Hesap silme talebi" konulu bir e-posta gönderin ve Royale'de görünen adınızı belirtin. Talepler 30 gün içinde yerine getirilir.</li>
+  </ul>
+  <p>Uygulamayı kaldırmak cihazınızdaki bilgileri siler, ancak sunucudaki Royale hesabınızı silmez; bunun için yukarıdaki yollardan birini kullanın. Kullanılmayan Royale hesapları en geç 2 yıl sonra silinir.</p>
 
   <h2>İzinler</h2>
   <ul>
-    <li><strong>Bildirimler:</strong> Yalnızca ayarlardan açarsanız, akşamları Günün Sorusu hatırlatması göstermek için. Hatırlatma cihazda yerel olarak oluşturulur.</li>
+    <li><strong>İnternet:</strong> Yalnızca Royale modunda oyun sunucusuna bağlanmak için.</li>
+    <li><strong>Bildirimler:</strong> Yalnızca ayarlardan açarsanız, akşamları Günün Sorusu hatırlatması için. Hatırlatma cihazda yerel olarak oluşturulur.</li>
     <li><strong>Açılışta çalışma:</strong> Cihaz yeniden başladığında hatırlatma alarmını yeniden kurmak için.</li>
     <li><strong>Titreşim:</strong> Oyun içi dokunsal geri bildirim için.</li>
   </ul>
 
   <h2>Paylaşım</h2>
-  <p>"Paylaş" butonuna bastığınızda skor metniniz, seçtiğiniz uygulamaya (ör. bir mesajlaşma uygulaması) Android'in paylaşım ekranı üzerinden sizin onayınızla iletilir. Bu metin geliştiriciye gönderilmez.</p>
+  <p>"Paylaş" butonuna bastığınızda skor metniniz, seçtiğiniz uygulamaya Android'in paylaşım ekranı üzerinden sizin onayınızla iletilir.</p>
 
   <h2>Çocukların gizliliği</h2>
-  <p>Uygulama hiçbir kullanıcıdan, çocuklar dahil, kişisel veri toplamaz.</p>
+  <p>Uygulama 13 yaş altındaki çocuklara yönelik değildir ve bilerek 13 yaş altındaki çocuklardan kişisel veri toplamaz. Royale, Google hesabı gerektirir.</p>
 
   <h2>Değişiklikler</h2>
   <p>Bu politika güncellenirse yeni sürüm bu sayfada, yürürlük tarihiyle birlikte yayınlanır.</p>
 
   <h2>İletişim</h2>
-  <p>Sorularınız için: <a href="mailto:kha.development.soft@gmail.com">kha.development.soft@gmail.com</a></p>
+  <p><a href="mailto:kha.development.soft@gmail.com">kha.development.soft@gmail.com</a></p>
 
   <hr>
 
   <h1>Privacy Policy (English summary)</h1>
-  <p>Altıgen Kelime Oyunu (<code>com.kha.altigenkelime</code>), developed by kha, does not collect, transmit or share any personal data. The app has no internet permission and contains no ads, analytics or tracking. Settings, game statistics and the daily streak are stored only on your device (and may be included in your Android/Google backup if you enabled it). Notifications are optional, generated locally on the device, and are used only for the daily reminder. Contact: <a href="mailto:kha.development.soft@gmail.com">kha.development.soft@gmail.com</a></p>
+  <p>Altıgen Kelime Oyunu (<code>com.kha.altigenkelime</code>), developed by kha. Single-player modes collect no personal data; settings and statistics stay on your device. The optional online "Royale" mode requires Google Sign-In and stores only your Google account's unique ID, a display name (first name and last initial), and game results/ELO rating on our server, to provide matchmaking and a public leaderboard. We do not store your email address, photo or location, do not use ads or analytics, and do not sell or share data. Traffic is encrypted. You can delete your account and all Royale data in the app (Royale → "Hesabımı sil") or by emailing <a href="mailto:kha.development.soft@gmail.com">kha.development.soft@gmail.com</a>; requests are fulfilled within 30 days.</p>
 </main>
 </body>
 </html>
