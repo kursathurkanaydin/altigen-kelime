@@ -20,16 +20,25 @@
 <body>
 <main>
   <h1>Gizlilik Politikası</h1>
-  <p class="muted">Altıgen Kelime Oyunu · Geliştirici: kha · Yürürlük tarihi: 20 Ekim 2026</p>
+  <p class="muted">Altıgen Kelime Oyunu · Geliştirici: kha · Yürürlük tarihi: 11 Kasım 2026</p>
 
   <p>Bu politika, Android için "Altıgen Kelime Oyunu" uygulamasının (paket adı <code>kha.development.soft</code>) verilerinizi nasıl ele aldığını açıklar.</p>
 
   <h2>Özet</h2>
   <ul>
-    <li><strong>Tek oyunculu modlar</strong> (Oyun, Günün Sorusu, İstatistik) hiçbir kişisel veri toplamaz; bilgiler yalnızca cihazınızda kalır.</li>
+    <li><strong>Tek oyunculu modlar</strong> (Oyun, Günün Sorusu, Harf Harf, İstatistik) hesap gerektirmez; skorlarınız ve ayarlarınız yalnızca cihazınızda kalır. Bu modlarda yalnızca aşağıda anlatılan çökme raporu ve toplu kullanım olayları gönderilir.</li>
     <li><strong>Royale</strong> (çevrim içi düello) ve <strong>Özel Yarışma</strong> isteğe bağlıdır. Kullanmak için Google ile giriş yaparsınız; yalnızca oyunun çalışması için gereken asgari bilgiler sunucumuzda tutulur.</li>
-    <li>Reklam, analiz veya izleme aracı kullanılmaz. Verileriniz satılmaz ve üçüncü taraflarla paylaşılmaz.</li>
+    <li>Reklam yoktur. Uygulamanın hatalarını ve hangi bölümlerin kullanıldığını görmek için Google'ın <strong>Firebase Crashlytics</strong> ve <strong>Firebase Analytics</strong> hizmetleri kullanılır (ayrıntı aşağıda). Verileriniz satılmaz.</li>
   </ul>
+
+  <h2 id="olcum">Çökme raporu ve kullanım ölçümü (Firebase)</h2>
+  <p>Sürüm 1.8.0'dan itibaren uygulama, Google Ireland Limited / Google LLC tarafından sağlanan Firebase Crashlytics ve Firebase Analytics hizmetlerini kullanır. Amaç, çökmeleri düzeltmek ve oyunun hangi bölümlerinin kullanıldığını toplu olarak görmektir.</p>
+  <ul>
+    <li><strong>Çökme raporu:</strong> uygulama beklenmedik biçimde kapanırsa hata kaydı, cihaz modeli, Android sürümü ve uygulama sürümü gönderilir.</li>
+    <li><strong>Kullanım olayları:</strong> uygulamanın açılması, bir oyunun başlaması ve bitmesi (mod, doğru sayısı, puan), Günün Sorusu'nun tamamlanması. Yazdığınız cevaplar, adınız, e-posta adresiniz ya da Google hesabınız bu olaylara eklenmez.</li>
+    <li>Firebase bu amaçla cihazınıza özgü rastgele bir kurulum kimliği kullanır ve yaklaşık konumu (ülke/şehir düzeyi) IP adresinden çıkarır. Reklam kimliği toplama uygulamada kapatılmıştır; veriler reklam için kullanılmaz.</li>
+  </ul>
+  <p>Google bu verileri bizim adımıza işler: <a href="https://firebase.google.com/support/privacy">Firebase gizlilik bilgileri</a>.</p>
 
   <h2>Cihazınızda saklanan bilgiler</h2>
   <ul>
@@ -47,6 +56,9 @@
     <tr><td>ELO puanı, galibiyet/mağlubiyet sayıları, maç skorları ve tarihleri</td><td>Eşleştirme, puanlama ve sıralama tablosu</td></tr>
     <tr><td>Arkadaş kodunuz, arkadaş listeniz, gönderdiğiniz/aldığınız arkadaşlık istekleri ve arkadaşlarınızla aranızdaki maç skoru</td><td>Arkadaş ekleme, arkadaşa meydan okuma ve davet linkleri</td></tr>
   </table>
+  <h2>Meydan okuma linkleri</h2>
+  <p>Oyun sonunda "Arkadaşına meydan oku"ya bastığınızda o oyunun soru listesi, puanınız, doğru sayınız ve adınız (Royale'e giriş yaptıysanız görünen adınız, yapmadıysanız "Oyuncu") sunucumuza kaydedilir ve bir link oluşturulur. Linkle oynayan herkesin puanı, doğru sayısı ve yazdığı ad aynı listeye eklenir; listeyi linke sahip olan herkes görebilir. Aynı kişinin iki kez sonuç göndermemesi için cihazınıza özgü rastgele bir kod kullanılır (kimliğinizi göstermez). Meydan okumalar 30 gün sonra otomatik silinir; Royale hesabınızı silerseniz oluşturduğunuz meydan okumalar ve sonuçlarınız da hemen silinir.</p>
+  <p>Royale'e giriş yaptıysanız uygulama, size gelen meydan okumaları ve meydan okumalarınıza gelen sonuçları bildirim olarak göstermek için yaklaşık 15 dakikada bir sunucumuza sorar.</p>
   <p><strong>E-posta adresiniz, profil fotoğrafınız ve konumunuz saklanmaz.</strong> Maç sırasında yazdığınız tahminler yalnızca o anda doğru/yanlış kontrolü için kullanılır ve kaydedilmez. Uygulama ile sunucu arasındaki iletişim şifrelidir (TLS).</p>
   <p>Görünen adınız ve ELO puanınız, Royale oynayan diğer kullanıcılara sıralama tablosunda ve maç ekranında gösterilir.</p>
   <p id="arkadaslar"><strong>Arkadaşlar ve davet linkleri:</strong> Arkadaşlarınız görünen adınızı, ELO puanınızı ve çevrim içi olup olmadığınızı görür. Arkadaş kodunuzu ya da davet linkinizi paylaştığınız kişi, linki açtığında görünen adınızı görür. Davet linkleri en fazla 30 dakika geçerlidir; yanıtlanmayan arkadaşlık istekleri 60 gün sonra silinir. Rehberinize (kişilerinize) erişilmez; linki hangi uygulamayla (WhatsApp, SMS vb.) paylaşacağınızı siz seçersiniz ve bu uygulamalara bizim tarafımızdan hiçbir bilgi gönderilmez. Bir kişiyi istediğiniz zaman arkadaş listenizden çıkarabilirsiniz.</p>
@@ -91,7 +103,7 @@
   <hr>
 
   <h1>Privacy Policy (English summary)</h1>
-  <p>Altıgen Kelime Oyunu (<code>kha.development.soft</code>), developed by kha. Single-player modes collect no personal data; settings and statistics stay on your device. The optional online "Royale" and "Özel Yarışma" (custom contest) modes require Google Sign-In and store only your Google account's unique ID, a display name (first name and last initial), and game results/ELO rating on our server, to provide matchmaking and a public leaderboard. If you use friends, your friend code, friend list, friend requests and head-to-head results are stored; friends see your display name, rating and online status. Invite links expire after 30 minutes; the app never accesses your contacts. We do not store your email address, photo or location, do not use ads or analytics, and do not sell or share data. Questions you write for a custom contest are shown to players in that room and kept only in server memory while the contest runs. If you report content, the reported text, the room, the host's account ID and name, your account ID and the reason are stored for up to 90 days for moderation. The server is hosted by Hetzner Online GmbH in Germany. New question packs are downloaded from GitHub Pages when the app starts; no personal or game data is sent. Traffic is encrypted. You can delete your account and all Royale data in the app (Royale → "Hesabımı sil") or by emailing <a href="mailto:kha.development.soft@gmail.com">kha.development.soft@gmail.com</a>; requests are fulfilled within 30 days.</p>
+  <p>Altıgen Kelime Oyunu (<code>kha.development.soft</code>), developed by kha. Single-player modes need no account; settings and statistics stay on your device. Since version 1.8.0 the app uses Google's Firebase Crashlytics and Firebase Analytics to fix crashes and see which parts of the game are used: crash logs, device model, OS and app version, an app-instance identifier, approximate location (country, derived from IP) and gameplay events (game started/finished, mode, score) are processed by Google on our behalf. Advertising ID collection is disabled; your answers, name and email are never included. The optional online "Royale" and "Özel Yarışma" (custom contest) modes require Google Sign-In and store only your Google account's unique ID, a display name (first name and last initial), and game results/ELO rating on our server, to provide matchmaking and a public leaderboard. If you use friends, your friend code, friend list, friend requests and head-to-head results are stored; friends see your display name, rating and online status. Invite links expire after 30 minutes; the app never accesses your contacts. We do not store your email address, photo or location, do not use ads or analytics, and do not sell or share data. Questions you write for a custom contest are shown to players in that room and kept only in server memory while the contest runs. If you report content, the reported text, the room, the host's account ID and name, your account ID and the reason are stored for up to 90 days for moderation. The server is hosted by Hetzner Online GmbH in Germany. New question packs are downloaded from GitHub Pages when the app starts; no personal or game data is sent. Traffic is encrypted. You can delete your account and all Royale data in the app (Royale → "Hesabımı sil") or by emailing <a href="mailto:kha.development.soft@gmail.com">kha.development.soft@gmail.com</a>; requests are fulfilled within 30 days.</p>
 </main>
 </body>
 </html>
